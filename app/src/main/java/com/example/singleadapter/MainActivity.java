@@ -19,10 +19,21 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayoutManager mLayoutManager;
     private ArrayList<RecyclerObje> mExampleList;
 
+    String imageLink = "https://g.hizliresim.com/alex-pettyfer-01";
+    String videoLink = "https://instagram.fsaw1-4.fna.fbcdn.net/v/t50.2886-16/88281411_240939810272750_6032082819699755303_n.mp4?_nc_ht=instagram.fsaw1-4.fna.fbcdn.net&_nc_cat=102&_nc_ohc=Y-4u58ammoYAX_Xt-QI&oe=5E7643A0&oh=611789c13ba64aef95783daf07543936";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mExampleList = new ArrayList<>();
+        mExampleList.add(new RecyclerObje(imageLink,imageLink));
+        mExampleList.add(new RecyclerObje(imageLink,imageLink));
+        mExampleList.add(new RecyclerObje(imageLink,imageLink));
+        mExampleList.add(new RecyclerObje(imageLink,imageLink));
+
 
         buildRecyclerView();
 
